@@ -9,7 +9,7 @@ client.on('ready', () => {
 
 client.on('message', msg => {
 
-else if (command === 'avatar') {
+else if (command === prefix + 'avatar') {
     if (!message.mentions.users.size) {
         return message.channel.send(`Your avatar: ${message.author.displayAvatarURL}`);
     }
