@@ -9,10 +9,11 @@ client.on('ready', () => {
 
 client.on('message', msg => {
 
-if(command === prefix + "kick") {
-  let member = message.mentions.members.first();
-  let reason = args.slice(1).join(" ");
-  member.kick(reason);
+else if (command === 'avatar') {
+    if (!message.mentions.users.size) {
+        return message.channel.send(`Your avatar: ${message.author.displayAvatarURL}`);
+    }
+
 }
 });
 
