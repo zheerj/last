@@ -9,7 +9,7 @@ client.on('ready', () => {
 
 client.on('message', msg => {
 
-if(command === "kick") {
+if(command === prefix + "kick") {
   let member = message.mentions.members.first();
   let reason = args.slice(1).join(" ");
   member.kick(reason);
